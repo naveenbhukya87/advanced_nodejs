@@ -122,6 +122,7 @@ src: The Coding Classroom.
         console.log(`App is up and running on ${PORT}`);
     });
     ```
+    
     **worker.js**
     ```
         const { parentPort } = require('worker_threads');

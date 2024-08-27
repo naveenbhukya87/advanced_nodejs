@@ -6,6 +6,7 @@ const Synch = () => {
     console.log("Done")
 }
 const Asynch = () => {
+    //No need of Synch
     fs.readFile("../basics/fs_classes/data.txt", "utf-8", (err, data) => {
         console.log(data)
     })
