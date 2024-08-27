@@ -14,6 +14,6 @@ const Asynch = () => {
     console.log("Done")
 }
 
-// Synch()
+Synch()
 Asynch()
 
