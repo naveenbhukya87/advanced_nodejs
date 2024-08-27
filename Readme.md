@@ -25,7 +25,7 @@ src: The Coding Classroom.
     - Print: print to console
     - Loop: return and read
 
-### Blocking and Non-blocking (Synchronous and Asynchronous):
+### Blocking and Non-blocking (Synchronous and Asynchronous) :
 - JavaScript is single-threaded, but parallelism and multithreading are possible within Node.js with the help of worker threads. 
 - We can make an Express.js server faster with worker threads when the main thread is blocked by heavy computations.
 - In server.js blocking api is taking lot more time and it is also blocking non-blocking api to get executed.
