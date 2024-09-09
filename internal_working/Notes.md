@@ -1,0 +1,22 @@
+Node JS Internal working:
+
+- NodeJS is built on 2 things:
+  - V8 Engine: Built on C++ to run Javascript
+  - LibUV: a library to implement **Event Loop** and **Thread Pool**
+- Code execution steps:
+  - When running **node index.js**,
+    - node creates **Node Process** which contains:
+      - **Main Thread**: which do the following:
+        - Initialize the project
+        - Execution of top level code (Which are not in functions)
+        - Execute require("module_name") code
+        - Event callback register
+        - Starts event loop
+      - **Thread pool**: for CPU intensive tasks, we use threads but not main thread and CPU intensive tasks include:
+        - fs
+        - Crypto related tasks
+        - compression
+        - database related
+      -- Event loop offloads CPU intensive tasks to threads.
+      -- By default there are 4 threads and they can go upto 1024
+      -- The worker pool size in NodeJS is changed from 128 to 1024 in V10.5.0. Prior to this version, the default worker pool size was 128. And 1024 can be increased by setting **UV_THREADPOOL_SIZE** environmental variable.
