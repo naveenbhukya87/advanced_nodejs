@@ -25,6 +25,8 @@ Node JS Internal working:
       - if No pending tasks: EXIT
       - Else repeat the Event loop
 
+      --Note: Promised callbacks are executed between the transition from one phase to another. Example if there is an promise resolved and now event loop is changed from timer callbacks to IO, then those promises are executed and goes to IO and so on.
+
     ```
         const fs = require('fs);
         SetTimeout(() => {
