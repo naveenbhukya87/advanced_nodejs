@@ -151,6 +151,14 @@ Node JS Internal working:
         1 -> 2720 Password5 is done
         2 -> 2830 Password7 is done
         3 -> 2857 Password6 is done
+        process.env.UV_THREADPOOL_SIZE default size is 4 but if we set it to 2 then: 
+            1 -> 400 Password1 is done
+            2 -> 400 Password3 is done
+            1 ->800 Password4 is done
+            2 -> 800 Password2 is done
+            1 -> 1200 Password5 is done
+            2 -> 1200 Password7 is done
+            1 -> 1600 Password6 is done
     8. Timeout expired: Set Timeout: 3
     //-------------------[Explanation END]-------------------//
     ```
